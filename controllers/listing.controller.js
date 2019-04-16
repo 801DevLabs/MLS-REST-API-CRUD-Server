@@ -12,6 +12,7 @@ exports.view_all = (req, res, next) => {
   })
 }
 
+// VIEW ONE
 exports.getOne = (req, res, next) => {
 	const id = req.params.id;
   Listing.findById(id)
