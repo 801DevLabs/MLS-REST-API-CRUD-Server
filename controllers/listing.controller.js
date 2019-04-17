@@ -32,16 +32,6 @@ exports.listing_state = (req, res, next) => {
     })
 };
 
-exports.listing_id = (req, res, next) => {
-  const listingID = req.params.id;
-  Listing.find({
-      id: listingID
-    })
-    .then(result => {
-      res.send(result)
-    })
-};
-
 exports.listing_create = (req, res, next) => {
   let listing = new Listing({
     address: req.body.address,

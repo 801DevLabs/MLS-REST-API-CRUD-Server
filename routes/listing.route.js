@@ -7,7 +7,6 @@ router.get('/test', listing_controller.test)
 router.get('/', listing_controller.view_all)
 router.get('/city/:city', listing_controller.listing_city)
 router.get('/state/:state', listing_controller.listing_state)
-router.get('/id/:id', listing_controller.listing_id)
 
 router.post('/create', listing_controller.listing_create)
 router.put('/:id/update', listing_controller.listing_update)
