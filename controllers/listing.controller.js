@@ -4,6 +4,7 @@ exports.test = (req, res, next) => {
   res.send('Greetings from the test controller')
 }
 
+// VIEW ALL
 exports.view_all = (req, res, next) => {
   Listing.find({})
   .then(result => {
@@ -25,6 +26,16 @@ exports.listing_state = (req, res, next) => {
   const listingState = req.params.state;
   Listing.find({
       state: listingState
+    })
+    .then(result => {
+      res.send(result)
+    })
+};
+
+exports.listing_id = (req, res, next) => {
+  const listingID = req.params.id;
+  Listing.find({
+      id: listingID
     })
     .then(result => {
       res.send(result)
