@@ -12,6 +12,14 @@ exports.view_all = (req, res, next) => {
   })
 }
 
+exports.getOne = (req, res, next) => {
+	const id = req.params.id;
+  Listing.findById(id)
+    .then(result => {
+		res.send(result)
+	})
+}
+
 exports.listing_city = (req, res, next) => {
   const listingCity = req.params.city;
   Listing.find({

@@ -5,6 +5,7 @@ const listing_controller = require('../controllers/listing.controller')
 
 router.get('/test', listing_controller.test)
 router.get('/', listing_controller.view_all)
+router.get('/:id', listing_controller.getOne)
 router.get('/city/:city', listing_controller.listing_city)
 router.get('/state/:state', listing_controller.listing_state)
 
