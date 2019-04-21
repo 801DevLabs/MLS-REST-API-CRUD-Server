@@ -21,6 +21,7 @@ exports.getOne = (req, res, next) => {
 	})
 }
 
+// VIEW BY CITY
 exports.listing_city = (req, res, next) => {
   const listingCity = req.params.city;
   Listing.find({
