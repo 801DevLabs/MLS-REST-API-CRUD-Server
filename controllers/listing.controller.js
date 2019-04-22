@@ -43,6 +43,7 @@ exports.listing_state = (req, res, next) => {
 exports.listing_create = (req, res, next) => {
   let listing = new Listing({
     address: req.body.address,
+    image: req.body.image,
     city: req.body.city,
     state: req.body.state,
     style: req.body.style,
